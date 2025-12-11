@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrícola Chapi – JORDY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <nav class="nav container">
+        <a class="brand" href="#home">Agrícola Chapi</a>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#operaciones">Operaciones</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#sostenibilidad">Sostenibilidad</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#exportaciones">Exportaciones</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO CON VIDEO -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline
+            poster="chapi.jpg">
+            <source src="https://cdn.coverr.co/videos/coverr-field-1528?token=eyJhbgciOiJIUzI1NiJ9" type="video/mp4" />
+        </video>
+
+        <div class="hero-content">
+            <h1>Excelencia agrícola para el mundo</h1>
+            <p>Palta Hass y uva de mesa — Calidad, trazabilidad y sostenibilidad</p>
+            <a class="btn" href="#productos">Ver Productos</a>
+        </div>
+
+        <div class="hero-gradient"></div>
+    </section>
+</header>
+
+<main>
+
+<!-- SECCIÓN NOSOTROS -->
+<section id="nosotros" class="container section">
+    <div class="split">
+        <div>
+            <h2>Sobre Nosotros</h2>
+            <p>En Agrícola Chapi trabajamos con prácticas sostenibles para ofrecer productos premium a mercados internacionales. Más de 20 años dedicados a la calidad, la trazabilidad y el cuidado del medio ambiente.</p>
+        </div>
+
+        <div class="about-image"></div>
+    </div>
+</section>
+
+<!-- OPERACIONES -->
+<section id="operaciones" class="container section">
+    <h2>Nuestras Operaciones</h2>
+    <p>Fundos modernos ubicados estratégicamente para lograr excelencia operacional.</p>
+
+    <div class="cards">
+        <div class="op-card">
+            <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38" alt="">
+            <h3>Fundo Chapi</h3>
+            <p>Producción de palta Hass y uva de mesa con tecnología de punta.</p>
+        </div>
+
+        <div class="op-card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="">
+            <h3>Fundo San Isidro</h3>
+            <p>Riego tecnificado y monitoreo avanzado para maximizar calidad.</p>
+        </div>
+
+        <div class="op-card">
+            <img src="https://images.unsplash.com/photo-1501630834273-4b5604d2ee31" alt="">
+            <h3>Fundo El Paraíso</h3>
+            <p>Excelencia agrícola y sostenibilidad ambiental.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTOS (CARRUSEL) -->
+<section id="productos" class="container section">
+    <h2>Productos</h2>
+
+    <div class="carousel">
+        <div class="slides" id="slides">
+
+            <div class="slide">
+                <img src="uva de mesa.jpg" alt="">
+                <figcaption>Uva de Mesa</figcaption>
+            </div>
+
+            <div class="slide">
+                <img src="img/palta.png"alt="">
+                <figcaption>Palta Hass</figcaption>
+            </div>
+
+            <div class="slide">
+                <img src="img/arándanos.jpeg"alt="">
+                <figcaption>Arándanos</figcaption>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prev">❮</button>
+        <button class="carousel-btn next" id="next">❯</button>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<!-- SOSTENIBILIDAD -->
+<section id="sostenibilidad" class="container section">
+    <h2>Sostenibilidad</h2>
+    <p>Comprometidos con el desarrollo ambiental y social.</p>
+
+    <div class="stats">
+        <div>
+            <strong>+1200</strong>
+            <p>Colaboradores</p>
+        </div>
+
+        <div>
+            <strong>+1500 ha</strong>
+            <p>De cultivos sostenibles</p>
+        </div>
+
+        <div>
+            <strong>3</strong>
+            <p>Fundos certificados</p>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICACIONES -->
+<section id="certificaciones" class="container section">
+    <h2>Certificaciones</h2>
+
+    <ul class="cert-list">
+        <li>GLOBALG.A.P.</li>
+        <li>GRASP</li>
+        <li>BRC</li>
+        <li>ISO 9001</li>
+        <li>HACCP</li>
+    </ul>
+</section>
+<!-- EXPORTACIONES (NUEVA SECCIÓN) -->
+<section id="exportaciones" class="container section">
+    <h2>Exportaciones</h2>
+    <p>Aquí se muestran las principales métricas de exportación mediante gráficos interactivos.</p>
+
+    <h3>Exportaciones Anuales (millones USD)</h3>
+    <canvas id="chartAnual"></canvas>
+
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="container section">
+    <h2>Contacto</h2>
+
+    <div class="contact-grid">
+
+        <form class="contact-form">
+            <label><span>Nombre:</span>
+                <input type="text" required>
+            </label><br><br>
+
+            <label><span>Email:</span>
+                <input type="email" required>
+            </label><br><br>
+
+            <label><span>Mensaje:</span>
+                <textarea rows="5"></textarea>
+            </label><br><br>
+
+            <button class="btn" type="submit">Enviar</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Información</h3>
+            <p>• Teléfono: +51 999 999 999</p>
+            <p>• Email: info@agricolachapi.com</p>
+
+           <div class="map-placeholder">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1936.0815015703365!2d-75.83314078320574!3d-13.948898219584787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1763590350527!5m2!1ses-419!2spe"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    © 2025 Agrícola Chapi — Todos los derechos reservados.
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+<script>
+    const anos = ["2019", "2020", "2021", "2022", "2023", "2024"];
+    const valores = [120, 140, 160, 155, 180, 210];
+
+    new Chart(document.getElementById("chartAnual"), {
+        type: 'line',
+        data: {
+            labels: anos,
+            datasets: [{
+                label: "Exportaciones (millones USD)",
+                data: valores
+            }]
+        }
+    });
+
+    const categorias = ["Alimentos", "Textiles", "Minería", "Tecnología", "Otros"];
+    const porcentajes = [35, 20, 25, 10, 10];
+
+    new Chart(document.getElementById("chartPie"), {
+        type: 'pie',
+        data: {
+            labels: categorias,
+            datasets: [{
+                data: porcentajes
+            }]
+        }
+    });
+</script>
+
+</body>
+</html>
